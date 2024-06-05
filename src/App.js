@@ -1,8 +1,16 @@
 import React, { useState } from 'react';
 import './App.css';
 
-import Tabs from './Components/Tabs';
+import PortfolioPage from './Pages/PortfolioPage';
 import Menu from './Components/Menu';
+
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+} from "react-router-dom";
+import MainPage from './Pages/MainPage';
+import AboutPage from './Pages/AboutPage';
 
 const App = () => {
   const [showMenu, setShowMenu] = useState(false);
@@ -11,22 +19,7 @@ const App = () => {
     setShowMenu(!showMenu);
   };
 
-  const images = {
-    'radio-1': [
-      '../Img/Instagram/IMG_4682.jpg',
-      '../Img/Instagram/IMG_4764.jpg',
-      '../Img/Instagram/IMG_4769.jpg',
-    ],
-    'radio-2': [
-      '../Img/Instagram/IMG_4772.jpg',
-      '../Img/Instagram/IMG_4826.jpg',
-    ],
-    'radio-3': [
-      '../Img/Instagram/IMG_4865.jpg',
-      '../Img/Instagram/IMG_4952.jpg',
-      '../Img/Instagram/IMG_4966.jpg',
-    ],
-  };
+  
 
   return (
     <div className="App">
@@ -38,9 +31,17 @@ const App = () => {
           </div>
         </div>
       </div>
-      <Menu showMenu={showMenu} toggleMenu={toggleMenu} />
-      <h1>Photo Gallery</h1>
-      <Tabs images={images} />
+      
+      <Router>
+          <Menu showMenu={showMenu} toggleMenu={toggleMenu} />
+            <Routes>
+                <Route path='/' element={<MainPage/>}/>
+                <Route path='/home' element={<MainPage />}/>
+                <Route path="/portfolio" element={<PortfolioPage />} />
+                <Route path='/about' element={<AboutPage/>}/>
+                
+            </Routes>
+        </Router>
     </div>
   );
 };
