@@ -140,7 +140,157 @@
   }
   
   
+ 
   
+  /* Styles pour les écrans de très petite taille */
+  @media only screen and (max-width: 480px) {
+    .presentation-title {
+      font-size: 3em; 
+    }
+
+    .page-header {
+      background-color: #B2AFAB;
+      background-position: center center;
+      background-size: cover;
+      min-height: 100vh; /* Hauteur minimale conservée */
+      max-height: 999px; /* Hauteur maximale conservée */
+      overflow: hidden;
+      position: relative;
+      width: 100%;
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
   
+  /* Overlay pour l'en-tête */
+  .page-header .filter::after {
+      background-color: rgba(0, 0, 0, 0.5);
+      content: "";
+      display: block;
+      height: 100%;
+      left: 0;
+      top: 0;
+      position: absolute;
+      width: 100%;
+      z-index: 1;
+  }
+  
+  /* Titre de présentation */
+  .presentation-title {
+      font-size: 4em; /* Taille réduite pour les petits écrans */
+      font-weight: 800;
+      margin: 0;
+      color: #FFFFFF;
+      background: #fbf8ec;
+      background: -moz-linear-gradient(top, #FFFFFF 35%, #4e6773 100%);
+      background: -webkit-linear-gradient(top, #FFFFFF 35%, #4e6773 100%);
+      background: linear-gradient(to bottom, #FFFFFF 35%, #4e6773 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+  }
+  
+  /* Sous-titre de présentation */
+  .presentation-subtitle {
+      font-size: 1.5em; /* Taille réduite pour les petits écrans */
+      color: #FFFFFF;
+      text-align: center;
+  }
+  
+  /* Boutons stylisés */
+  .styled-button {
+      background-color: grey; 
+      border-radius: 12px;
+      border: none; 
+      color: white; 
+      padding: 15px 30px; /* Conserver la taille des boutons */
+      text-align: center; 
+      text-decoration: none; 
+      display: inline-flex; 
+      font-size: 16px; /* Conserver la taille du texte */
+      margin: 5px 15px; /* Conserver l'espacement entre les boutons */
+      cursor: pointer; 
+      transition-duration: 0.4s; 
+      position: relative; 
+      z-index: 10; 
+  }
+  
+  /* Style au survol des boutons */
+  .styled-button:hover {
+      background-color: rgb(0, 0, 0); 
+      color: white; 
+      border: 2px solid #000000; 
+  }
+  
+  /* Conteneur de boutons */
+  .Button-page {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      margin-top: 20px; /* Conserver l'espacement entre les boutons */
+  }
+  
+  /* Brouillard */
+  .fog-low {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      margin-left: -35%;
+      margin-bottom: -50px;
+      width: 110%; /* Conserver la largeur du brouillard */
+      opacity: .85;
+  }
+  
+  /* Image dans le brouillard */
+  .fog-low img {
+      width: 100%;
+  }
+  
+  /* Positionnement du contenu central */
+  .page-header .content-center {
+      margin-top: 85px; /* Conserver la marge supérieure */
+  }
+  
+  /* Nuages animés */
+  .moving-clouds {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 250.625em; /* Conserver la largeur des nuages */
+      height: 43.75em; /* Conserver la hauteur des nuages */
+      -webkit-animation: cloudLoop 80s linear infinite;
+      animation: cloudLoop 80s linear infinite;
+  }
+  
+  /* Animation des nuages */
+  @keyframes cloudLoop {
+      0% {
+          -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+      }
+      100% {
+          -webkit-transform: translate3d(-50%, 0, 0);
+          transform: translate3d(-50%, 0, 0);
+      }
+  }
+  
+  /* Image suivante */
+  .following img {
+      max-width: 70px;
+  }
+  
+  /* Effet de parallaxe */
+  .parallax {
+      width:100%;
+      height:570px;
+      display: block;
+      background-attachment: fixed;
+      background-repeat:no-repeat;
+      background-size:cover;
+      background-position: center center;
+  }
+    
+  }
  
   

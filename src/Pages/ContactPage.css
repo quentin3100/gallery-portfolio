@@ -1,0 +1,187 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap");
+
+.profile-card * {
+  margin: 0;
+  padding: 0;
+  font-family: "Nunito", sans-serif;
+}
+
+.profile-card :root {
+  --green: #58a497;
+  --yellow: #e09449;
+  --lightgreen1: #a4bdb7;
+  --brown: #8b4448;
+  --gray: gray;
+  --lightgreen2: rgb(164, 189, 183, 0.5);
+  --box: #ededed;
+}
+
+.profile-card body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #a4bdb7;
+}
+
+.profile-card .box {
+  width: 350px;
+  height: fit-content;
+  border-radius: 20px;
+  padding: 10px;
+  text-align: center;
+  background: #ededed;
+}
+
+.profile-card .box1 {
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: auto;
+}
+
+.profile-card .content {
+  margin: 15px 2px;
+}
+
+.profile-card .image img {
+  height: auto;
+  width: 120px;
+  border-radius: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 5px;
+}
+
+.profile-card .level {
+  font-size: 0.7em;
+  background-color: rgb(164, 189, 183, 0.5);
+  width: 80px;
+  padding: 3px;
+  border-radius: 5px;
+  font-weight: bolder;
+  letter-spacing: 1px;
+  display: block;
+  margin: 0px auto 10px;
+}
+
+.profile-card .name {
+  font-size: 1.25em;
+  font-weight: bolder;
+  letter-spacing: 1px;
+}
+
+.profile-card .job_title {
+  font-size: 0.65em;
+  font-weight: bolder;
+  color: gray;
+  margin-top: -2px;
+}
+
+.profile-card .job_discription {
+  font-size: 0.7em;
+  color: gray;
+  margin: 10px 30px 20px;
+}
+
+.profile-card .icons {
+  margin: 0px 30px;
+  font-size: 1.5em;
+  display: flex;
+  justify-content: space-around;
+}
+
+.profile-card .icons button {
+  width: fit-content;
+  height: fit-content;
+  border: none;
+  font-size: 1em;
+}
+
+.profile-card ion-icon:hover {
+  color: #58a497;
+  transition: 0.5s;
+}
+
+.profile-card button {
+  width: 130px;
+  height: 40px;
+  border-radius: 10px;
+  font-weight: bolder;
+}
+
+.profile-card .button {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  margin: 20px 30px 0px;
+}
+
+.profile-card .button .message {
+  background: #ededed;
+  border: 2px solid #000;
+}
+
+.profile-card .button .connect {
+  background-color: #000;
+  color: #ededed;
+  border: none;
+}
+
+.profile-card button.connect:hover {
+  letter-spacing: 1px;
+  transition: 0.5s;
+}
+
+.profile-card button.message:hover {
+  letter-spacing: 1px;
+  transition: 0.5s;
+  background: rgba(88, 164, 151, 0.5);
+}
+
+
+.profile-card .row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0px 0px 10px;
+}
+
+.profile-card h5 {
+  font-weight: bolder;
+  font-size: 1em;
+}
+
+.profile-card .row p {
+  font-size: 0.8em;
+}
+
+
+@media screen and (max-width: 480px) {
+  .profile-card .box {
+    border-radius: 20px;
+  }
+
+  .profile-card .button {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .profile-card .button button {
+    width: 250px;
+  }
+
+  .profile-card button.connect {
+    margin-top: 10px;
+  }
+
+  .profile-card .content2 {
+    padding: 0px 20px;
+  }
+
+  .profile-card .content2 img {
+    width: 60px;
+    height: 60px;
+  }
+}

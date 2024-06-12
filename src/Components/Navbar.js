@@ -1,14 +1,8 @@
-import React, { useState } from 'react';
-import './Navbar.css';
+import React from 'react';
+import './NavBar.css';
 
 
-const [showMenu, setShowMenu] = useState(false);
-
-  const toggleMenu = () => {
-    setShowMenu(!showMenu);
-  };
-
-const Navbar = ({ toggleMenu }) => {
+const NavBar = ({ toggleMenu }) => {
   return (
     <div id="navbar">
       <div className="nav-wrapper">
@@ -21,4 +15,4 @@ const Navbar = ({ toggleMenu }) => {
   );
 };
 
-export default Navbar;
+export default NavBar;

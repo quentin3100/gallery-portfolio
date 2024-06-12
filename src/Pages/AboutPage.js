@@ -25,11 +25,9 @@ const AboutMe = () => {
     <div className="about-me">
       <h2>À propos de moi</h2>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod rutrum tellus, a fringilla nulla cursus id.
-        Fusce nec ex eget felis laoreet pharetra. Vivamus interdum magna vel urna maximus, sed volutpat libero ultrices.
-        Phasellus in odio eu magna feugiat eleifend. Nulla convallis congue libero, vel fringilla nulla dictum sit amet.
-        Maecenas consectetur felis sed augue dapibus ultricies. Morbi accumsan massa in velit facilisis fermentum.
+        Je suis un jeune photographe passionné pratiquant majoritairement la photo de paysage ainsi que la photo sportive. 
       </p>
+      <hr />
     </div>
   );
 };
@@ -60,7 +58,7 @@ const GearList = () => {
 const AboutPage = () => {
   return (
     <div className="app">
-      <h1>Ma page photo</h1>
+      <h1>Mon matériel photo</h1>
       <AboutMe />
       <GearList />
     </div>

@@ -11,6 +11,10 @@ import {
 } from "react-router-dom";
 import MainPage from './Pages/MainPage';
 import AboutPage from './Pages/AboutPage';
+import ContactPage from './Pages/ContactPage';
+import NavBar from './Components/NavBar';
+import GoUp from './Components/GoUp';
+
 
 const App = () => {
   const [showMenu, setShowMenu] = useState(false);
@@ -22,15 +26,10 @@ const App = () => {
   
 
   return (
+    
     <div className="App">
-      <div id="navbar">
-        <div className="nav-wrapper">
-          <div className="brand">Mon portfolio</div>
-          <div className="menu-button" onClick={toggleMenu}>
-            <span />
-          </div>
-        </div>
-      </div>
+      <GoUp/>
+     <NavBar toggleMenu={toggleMenu}/>
       
       <Router>
           <Menu showMenu={showMenu} toggleMenu={toggleMenu} />
@@ -39,7 +38,7 @@ const App = () => {
                 <Route path='/home' element={<MainPage />}/>
                 <Route path="/portfolio" element={<PortfolioPage />} />
                 <Route path='/about' element={<AboutPage/>}/>
-                
+                <Route path='/contact' element={<ContactPage/>}/>
             </Routes>
         </Router>
     </div>

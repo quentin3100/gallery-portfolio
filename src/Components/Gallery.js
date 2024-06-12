@@ -30,6 +30,7 @@ const Gallery = ({ images }) => {
     <div className="photo-gallery">
       <div className="gallery-grid">
         {images.map((image, index) => (
+          // eslint-disable-next-line 
           <img
             key={index}
             src={image}

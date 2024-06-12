@@ -1,7 +1,6 @@
 import React from 'react';
 import Tabs from '../Components/Tabs';
 
-import { useState } from 'react';
 
 const PortfolioPage = () => {
   const images = {
