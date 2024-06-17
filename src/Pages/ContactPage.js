@@ -10,6 +10,11 @@ const ContactPage = () => {
   const goToPortfolioPage=()=>{
     navigate("/portfolio");
   }
+
+  const openLink = (url) => {
+    window.open(url, '_blank');
+  }
+
   return (
     <section className="profile-card">
       <div className="box1 box">
@@ -27,13 +32,13 @@ const ContactPage = () => {
           </div>
           <div className="icons">
             <button>
-              <IonIcon icon={logoInstagram} />
+              <IonIcon icon={logoInstagram} onClick={() => openLink('https://www.instagram.com/quentin_fra12')} />
             </button>
             <button>
-              <IonIcon icon={logoLinkedin} />
+              <IonIcon icon={logoLinkedin} onClick={()=> openLink('https://www.linkedin.com/in/quentin-fragni%C3%A8re-426842204/')} />
             </button>
             <button>
-              <IonIcon icon={logoFacebook} />
+              <IonIcon icon={logoFacebook} onClick={()=>openLink('https://www.facebook.com/queque.fragn/')} />
             </button>
           </div>
           <div className="button">

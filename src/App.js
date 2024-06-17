@@ -12,8 +12,10 @@ import {
 import MainPage from './Pages/MainPage';
 import AboutPage from './Pages/AboutPage';
 import ContactPage from './Pages/ContactPage';
+import LegalPage from './Pages/LegalPage';
 import NavBar from './Components/NavBar';
 import GoUp from './Components/GoUp';
+import CookieBanner from './Components/CookieBanner';
 
 
 const App = () => {
@@ -39,8 +41,10 @@ const App = () => {
                 <Route path="/portfolio" element={<PortfolioPage />} />
                 <Route path='/about' element={<AboutPage/>}/>
                 <Route path='/contact' element={<ContactPage/>}/>
+                <Route path='/legal' element={<LegalPage />} />
             </Routes>
         </Router>
+        <CookieBanner />
     </div>
   );
 };

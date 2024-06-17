@@ -27,6 +27,11 @@ const Menu = (props) => {
               CONTACT
             </a>
           </li>
+          <li>
+            <a href="/legal" onClick={props.toggleMenu}>
+              LEGAL
+            </a>
+          </li>
         </ul>
       </div>
     </div>
