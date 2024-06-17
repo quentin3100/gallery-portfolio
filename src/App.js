@@ -45,6 +45,11 @@ const App = () => {
             </Routes>
         </Router>
         <CookieBanner />
+        <footer className="footer">
+        <div className="footer-content">
+          <p>&copy; {new Date().getFullYear()} Fragnière Quentin. Tous droits réservés.</p>
+        </div>
+      </footer>
     </div>
   );
 };

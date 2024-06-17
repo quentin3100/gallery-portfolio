@@ -37,6 +37,15 @@ const Tabs = ({ images }) => {
             onChange={() => setActiveTab('radio-3')}
           />
           <label className="tab" htmlFor="radio-3">Perso</label>
+
+          <input
+            type="radio"
+            id="radio-4"
+            name="tabs"
+            checked={activeTab === 'radio-4'}
+            onChange={() => setActiveTab('radio-4')}
+          />
+          <label className="tab" htmlFor="radio-4">Animaux</label>
           
           <span className="glider" />
         </div>

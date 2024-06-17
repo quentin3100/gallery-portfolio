@@ -4,11 +4,27 @@ import './Gallery.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCamera, faAdjust, faEye, faStopwatch } from '@fortawesome/free-solid-svg-icons';
 
-
-
 const Gallery = ({ images }) => {
   const [selectedImageIndex, setSelectedImageIndex] = useState(null);
   const [exifData, setExifData] = useState(null);
+
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (selectedImageIndex !== null) {
+        if (e.key === 'ArrowLeft') {
+          showPreviousImage(e);
+        } else if (e.key === 'ArrowRight') {
+          showNextImage(e);
+        }
+      }
+    };
+
+    document.addEventListener('keydown', handleKeyDown);
+
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [selectedImageIndex]);
 
   useEffect(() => {
     if (selectedImageIndex !== null) {
@@ -40,20 +56,15 @@ const Gallery = ({ images }) => {
   };
 
   const fetchExifData = (index) => {
-    console.log("Fetching EXIF data for index:", index);
-  
-   
     if (!images[index]) {
       console.error("Invalid image URL:", images[index]);
       return;
     }
   
-    
     const img = new Image();
     img.onload = function() {
       EXIF.getData(img, function() {
         const exifData = EXIF.getAllTags(this);
-        console.log("Retrieved EXIF data:", exifData);
         setExifData(exifData);
       });
     };
@@ -64,7 +75,7 @@ const Gallery = ({ images }) => {
     if (!exifData) return null;
 
     return {
-      Camera : exifData.Model,
+      Camera: exifData.Model,
       Aperture: `f/${exifData.FNumber.toFixed(1)}`,
       ISO: exifData.ISOSpeedRatings,
       ShutterSpeed: `1/${Math.round(1 / exifData.ExposureTime)}s`

@@ -62,6 +62,10 @@ input[id="radio-3"]:checked ~ .glider {
   transform: translateX(200%);
 }
 
+input[id="radio-4"]:checked ~ .glider {
+  transform: translateX(300%);
+}
+
 .glider {
   position: absolute;
   display: flex;
@@ -98,6 +102,10 @@ input[id="radio-3"]:checked ~ .glider {
 
   input[id="radio-3"]:checked ~ .glider {
     transform: translateY(200%);
+  }
+
+  input[id="radio-4"]:checked ~ .glider {
+    transform: translateY(300%);
   }
 
   .glider {
